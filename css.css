@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --sectionheight: 98vh;
+    --sectionwidth: 98vw;
+    /* --sectionmargintop: 1vh; */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* height: calc(10 * (var(--sectionheight) + 10vh)); */
+    /* height: 3000px; */
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    flex-basis: var(--sectionheight);
+    margin-top: calc((100vh - var(--sectionheight)) * 0.5);
+    width: var(--sectionwidth);
+    background-color: royalblue;
+}
+
+section.welcome {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(img/Widok5.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+section.welcome h1 {
+    margin-top: 300px;
+    font-size: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    /* text-shadow: 10px 10px 10px #314102r; */
+    /* text-shadow: 10px 10px 10px red; */
+}
+
+section.welcome h2 {
+    margin-top: 0px;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
