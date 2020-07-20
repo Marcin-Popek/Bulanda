@@ -17,11 +17,12 @@ body {
 
 section {
     display: flex;
+    flex-direction: column;
     flex-basis: var(--sectionheight);
+    max-width: 1920px;
 }
 
 section.welcome {
-    flex-direction: column;
     align-items: stretch;
     background-image: url(img/Widok5.jpg);
     background-position: center center;
@@ -44,6 +45,47 @@ section.welcome h2 {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     /* border: yellow solid 2px; */
+}
+
+div.picture {
+    background-repeat: no-repeat;
+}
+
+section.discover div.picture {
+    height: 50vh;
+    background-image: url(img/Widok6.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+section.offer div.picture {
+    height: 50vh;
+    background-image: url(img/Zewnątrz.jpg);
+    background-position: 0% 70%;
+}
+
+section.place div.picture {
+    height: 50vh;
+    background-image: url(img/Pokoj1.jpg);
+    background-position: 0% 70%;
+}
+
+section.extra div.picture {
+    height: 50vh;
+    background-image: url(img/Balia1.jpg);
+    background-position: 0% 10%;
+}
+
+section.expansion div.picture {
+    height: 50vh;
+    background-image: url(img/Huśtawka.jpg);
+    background-position: 0% 60%;
+}
+
+section.season div.picture {
+    height: 50vh;
+    background-image: url(img/Widok1.jpg);
+    background-position: 0% 60%;
 }
 
 /* button start---------------------------------------------------- */
@@ -111,18 +153,33 @@ button:hover i {
 
 /* button end------------------------------------------------ */
 
-section.discover {
-    flex-direction: row;
-    background-color: yellow;
+section img {
+    height: 50vh;
 }
 
-section.discover div p {
-    width: 30vw;
+section div.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    width: 100%;
+    /* background-color: cadetblue; */
 }
 
-section.discover img {
-    width: 30vw;
+section div p {
+    /* background-color: chartreuse; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding: 0 5px 0 5px;
 }
+
+iframe {
+    height: 50vh;
+    width: 100vw;
+}
+
+
 
 /* media */
 
@@ -168,6 +225,10 @@ section.discover img {
         margin-top: 360px;
         font-size: 50px;
     }
+
+    section div p {
+        padding: 0 25px 0 25px;
+    }
 }
 
 @media(min-width: 800px) {
@@ -182,8 +243,31 @@ section.discover img {
     }
 }
 
-@media(min-width: 1024px) {
+@media(min-width:560px) and (orientation:landscape) {
     section.welcome h1 {
+        margin-top: 90px;
+        font-size: 40px;
+    }
+
+    section.welcome h2 {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    section img {
+        height: auto;
+    }
+}
+
+@media(min-width: 1024px) {
+    section {
+        width: calc(100vw- 10px);
+
+        /* width: 90vw; */
+    }
+
+    section.welcome h1 {
+        font-size: 50px;
         margin-top: 320px;
         font-size: 70px;
     }
@@ -191,6 +275,37 @@ section.discover img {
     section.welcome h2 {
         margin-top: 30px;
         font-size: 40px;
+    }
+
+    section.discover div.picture {
+
+        background-position: 50% 50%;
+        background-size: cover;
+    }
+
+    section.offer div.picture {
+
+        background-position: 0% 70%;
+    }
+
+    section.place div.picture {
+
+        background-position: 0% 70%;
+    }
+
+    section.extra div.picture {
+
+        background-position: 0% 10%;
+    }
+
+    section.expansion div.picture {
+
+        background-position: 0% 60%;
+    }
+
+    section.season div.picture {
+
+        background-position: 0% 60%;
     }
 }
 
