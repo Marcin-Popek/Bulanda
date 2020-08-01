@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -33,7 +34,7 @@ section.welcome h1 {
     margin-top: 100px;
     font-size: 40px;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Cinzel, serif;
     color: white;
     /* border: yellow solid 2px; */
 }
@@ -42,7 +43,7 @@ section.welcome h2 {
     margin-top: 45px;
     font-size: 25px;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Roboto, Helvetica, sans-serif;
     color: white;
     /* border: yellow solid 2px; */
 }
@@ -52,21 +53,39 @@ div.picture {
 }
 
 section.discover div.picture {
-    height: 50vh;
-    background-image: url(img/Widok6.jpg);
+    height: 50%;
+    background-image: url(img/Zdjęcie\ nr.\ m1.jpg);
     background-position: 50% 50%;
     background-size: cover;
 }
 
-section.offer div.picture {
+/* section.offer div.picture {
     height: 50vh;
-    background-image: url(img/Zewnątrz.jpg);
+    background-image: url(img/Zdjęcie\ nr.\ 2.jpg);
+    background-position: 0% 70%;
+} */
+
+section.m2 div.picture {
+    height: 50vh;
+    background-image: url(img/Zdjęcie\ nr.\ 2.jpg);
     background-position: 0% 70%;
 }
 
-section.place div.picture {
+section.m3 div.picture {
     height: 50vh;
-    background-image: url(img/Pokoj1.jpg);
+    background-image: url(img/Zdjęcie\ nr.\ 3.jpg);
+    background-position: 0% 70%;
+}
+
+section.dzienny div.picture {
+    height: 50vh;
+    background-image: url(img/Zdjęcie\ nr.\ 5.jpg);
+    background-position: 0% 70%;
+}
+
+section.lazienka div.picture {
+    height: 50vh;
+    background-image: url(img/Zdjęcie\ nr.6.jpg);
     background-position: 0% 70%;
 }
 
@@ -91,7 +110,7 @@ section.season div.picture {
 /* button start---------------------------------------------------- */
 button.arrow {
     position: absolute;
-    bottom: 00px;
+    bottom: 0px;
     left: 50%;
     width: 30px;
     height: 70px;
@@ -153,22 +172,18 @@ button:hover i {
 
 /* button end------------------------------------------------ */
 
-section img {
-    height: 50vh;
-}
-
 section div.text {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50vh;
+    height: 50%;
     width: 100%;
     /* background-color: cadetblue; */
 }
 
 section div p {
     /* background-color: chartreuse; */
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Roboto, Helvetica, sans-serif;
     font-size: 20px;
     text-align: center;
     padding: 0 5px 0 5px;
@@ -176,7 +191,7 @@ section div p {
 
 iframe {
     height: 50vh;
-    width: 100vw;
+    width: 100%;
 }
 
 
@@ -254,21 +269,41 @@ iframe {
         font-size: 20px;
     }
 
-    section img {
-        height: auto;
-    }
 }
 
 @media(min-width: 1024px) {
-    section {
-        width: calc(100vw- 10px);
+    body {
+        justify-content: space-around;
+        align-items: center;
+        height: calc(1100vh);
 
-        /* width: 90vw; */
+    }
+
+    section.welcome {
+        flex-direction: column;
+        flex-basis: var(--sectionheight);
+    }
+
+    section {
+        flex-basis: calc(100vh - 50px);
+        flex-direction: row;
+        width: calc(100% - 50px);
+        background-color: #FEFEDC;
+        box-shadow: 10px 10px 20px #aaaaaa;
+    }
+
+    section.rev {
+        flex-direction: row-reverse;
+    }
+
+    section div.text {
+        height: 100%;
+        width: 50%;
     }
 
     section.welcome h1 {
         font-size: 50px;
-        margin-top: 320px;
+        margin-top: 350px;
         font-size: 70px;
     }
 
@@ -277,36 +312,54 @@ iframe {
         font-size: 40px;
     }
 
-    section.discover div.picture {
+    button.arrow {
+        bottom: 50px;
+    }
 
-        background-position: 50% 50%;
+    div.picture {
         background-size: cover;
     }
 
-    section.offer div.picture {
+    section.discover div.picture {
+        background-position: 50% 50%;
+        height: 100%;
+        width: 50%;
+    }
 
+    section.offer div.picture {
         background-position: 0% 70%;
+        height: 100%;
+        width: 50%;
     }
 
     section.place div.picture {
-
         background-position: 0% 70%;
+        height: 100%;
+        width: 50%;
     }
 
     section.extra div.picture {
-
         background-position: 0% 10%;
+        height: 100%;
+        width: 50%;
     }
 
     section.expansion div.picture {
-
         background-position: 0% 60%;
+        height: 100%;
+        width: 50%;
     }
 
     section.season div.picture {
-
         background-position: 0% 60%;
+        height: 100%;
+        width: 50%;
     }
+
+    section.contact {
+        background-color: chartreuse;
+    }
+
 }
 
 /* media */
