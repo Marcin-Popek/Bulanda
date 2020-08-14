@@ -7,7 +7,7 @@
 :root {
     --sectionheight: 100vh;
     --sectionwidth: 100vw;
-    /* --sectionmargintop: 1vh; */
+    --sectionmargintop: 50px;
 }
 
 body {
@@ -111,12 +111,20 @@ section.welcome h2 {
     /* border: yellow solid 2px; */
 }
 
+section h2 {
+    /* margin-top: 100px; */
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Cinzel, serif;
+}
+
 div.picture {
     background-repeat: no-repeat;
 }
 
 section.discover div.picture {
-    height: 50%;
+    height: 50vh;
     background-image: url(img/Zdjęcie\ nr.\ m1.jpg);
     background-position: 50% 50%;
     background-size: cover;
@@ -237,9 +245,10 @@ button:hover i {
 
 section div.text {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 50%;
+    justify-content: space-evenly;
+    height: 50vh;
     width: 100%;
     /* background-color: cadetblue; */
 }
@@ -247,7 +256,7 @@ section div.text {
 section div p {
     /* background-color: chartreuse; */
     font-family: Roboto, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
     padding: 0 5px 0 5px;
 }
